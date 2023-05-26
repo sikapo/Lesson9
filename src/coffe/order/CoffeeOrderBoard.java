@@ -2,6 +2,7 @@ package coffe.order;
 
 import java.util.ArrayList;
 
+
 public class CoffeeOrderBoard {
     ArrayList<Order> orders = new ArrayList<>();
 
@@ -11,9 +12,17 @@ public class CoffeeOrderBoard {
         }
         else orders.add(new Order(name, orders.size() + 1));
     }
+
+    public void delivery(){
+        orders.remove(0);
+    }
+    public void delivery(int orderNumber){
+        orders.remove(orderNumber);
+    }
+
     public void draw() {
-        for (int i = 0; i < orders.size(); i++) {
-            System.out.println(orders.get(i));
+        for (Order order : orders) {
+            System.out.println(order);
         }
     }
 }

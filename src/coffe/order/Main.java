@@ -1,7 +1,5 @@
 package coffe.order;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
     String[] visitors = {"Bob", "Vitalik", "Chad", "Jed", "Alex"};
@@ -12,7 +10,7 @@ public class Main {
             coffeeOrderBoard.add(visitor);
         }
 
-
+        coffeeOrderBoard.delivery(2);
         coffeeOrderBoard.draw();
     }
 }
